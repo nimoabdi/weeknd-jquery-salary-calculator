@@ -5,37 +5,44 @@ $(document).ready(onReady);
 function onReady() {
     console.log('ready to start'); }
 
-    $(document).on('click', '#submit-Button', onSubmit);
+    $(document).on('click', '#submitButton', addEmployee);
 
-    function onSubmit() {
-        let FirstName = $('.first-name').val();
+    function addEmployee() {
+        let FirstName = $('#firstName').val();
         console.log('first name', FirstName);
 
-        let lastName = $('.last-name').val();
+        let lastName = $('#lastName').val();
         console.log('last name', lastName);
 
-        let ID = $('.id-number').val();
+        let ID = $('#idNumber').val();
         console.log('id number', ID);
 
-        let Title = $('.job-title').val();
+        let Title = $('#jobTitle').val();
         console.log('job title', Title);
 
-        let annualSalary = $('.annual-salary').val();
+        let annualSalary = $('#annualSalary').val();
         console.log('annual salary', annualSalary);
 
     }
 
-    $('#employeeTable').append(`
+    function inTable() {
+      $('.employeeTable').empty();
+      for(let list of employee) {
+        $('.employeeTable').append(`
     <tr>
-       <td>${FirstName}</td>
-       <td>${lastName}</td>
-       <td>${ID}</td>
-       <td>${Title}</td>
+       <td>${list.FirstName}</td>
+       <td>${list.lastName}</td>
+       <td>${list.ID}</td>
+       <td>${list.Title}</td>
        <td>$annualSalary ${annualSalary} </td>
     
     
     
     `);
+      }
+    }
+
+    
 
 
 
