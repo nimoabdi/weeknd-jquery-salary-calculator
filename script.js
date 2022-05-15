@@ -6,7 +6,7 @@ function onReady() {
   console.log('ready to start'); }
   
   $(document).on('click', '#submitButton', addEmployee);
-  $(document).on('click', '.deleteButton', onDelete);
+  $(document).on('click', '#deleteButton', onDelete);
   
   function addEmployee() {
     let FirstName = $('#firstName').val();
@@ -53,7 +53,15 @@ function onReady() {
     tr.remove();
   }
   
-  
+  // empty array to loop through the empoyees salary
+  addSalary(); {
+
+  $("#firstName").val();
+  $("#lastName").val();
+  $("#idNumber").val();
+  $("#jobTitle").val();
+  $("#annualSalary").val();
+}
   
   
   
