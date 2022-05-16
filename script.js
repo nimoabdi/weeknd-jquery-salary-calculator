@@ -35,7 +35,7 @@ function onReady() {
 
 
   // testing to see if i need a function before the append
-  $('#employeeTable').append(`
+  $('#employeeList').append(`
   <tr>
       <td>${firstNameInputs}</td>
       <td>${lastNameInputs}</td>
@@ -54,26 +54,26 @@ function onReady() {
     
   }
 
-  
+  // delete button is showing up as undefined so i need to figure that out
   function onDelete() {
     let  tr= $(this).parent().parent();
-    let employee= $(this)
+    let employees= $(this)
     .parent()
     .siblings()
     .first()
     .text();
-    alert('Employee deleted 😓 ${employee}.', employee);
+    alert('Employee deleted 😓 ', employees);
     tr.remove();
   }
 
 
-function calculateSalary(employee) {
+function calculateSalary(employees) {
   let employeeSalary = 0;
   for (let employeeSalary of employees) {
     employeeSalary += employeeSalary.annualSalary;
   }
   employeeSalary /12;
-  if (employeeSalary > 20000) {
+  if (employeeSalary /12 >= 20000) {
     $('totalMonthlyCost').css('background-color', 'red');
   }
 }
