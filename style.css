@@ -28,3 +28,9 @@ h1 {
 h2{
     text-align: right;
 }
+table{
+    border: 1px solid black;
+    width: 100%;
+    border-collapse: collapse;
+    
+}
