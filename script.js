@@ -37,14 +37,14 @@ function onReady() {
     // testing to see if i need a function before the append
     $('#employeeList').append(`
     <tr>
-      <td>${firstNameInputs}</td>
-      <td>${lastNameInputs}</td>
-      <td>${employeeIDNumberInputs}</td>
-      <td>${jobTitleInputs}</td>
-      <td>${annualSalaryInputs}</td>
-      <td>
-      <button class="deleteButton">Delete</button>
-      </td>
+    <td>${firstNameInputs}</td>
+    <td>${lastNameInputs}</td>
+    <td>${employeeIDNumberInputs}</td>
+    <td>${jobTitleInputs}</td>
+    <td>${annualSalaryInputs}</td>
+    <td>
+    <button class="deleteButton">Delete</button>
+    </td>
     </tr>`);
     
     // emptying array
@@ -53,6 +53,10 @@ function onReady() {
     $("#idNumberInputs").val('');
     $("#jobTitleInputs").val('');
     $("#annualSalaryInputs").val('');
+    
+   
+   monthlyTotal();
+   
     
   }
   
@@ -64,17 +68,29 @@ function onReady() {
     
   }
   
-  
-  function calculateSalary() {
-    let employeeSalary = 0;
-    for (let employeeSalary of employees) {
-      employeeSalary += employeeSalary.annualSalary;
+  function monthlyTotal(){
+    let total = 0;
+    $('.totalMonthlyCost').empty();
+    for (let salary of employees){
+        total += Number(salary.annualSalary);
     }
-    employeeSalary /12;
-    if (employeeSalary /12 >= 20000) {
-      $('totalMonthlyCost').css('background-color', 'red');
+    $('.totalMonthlyCost').append(`Total Monthly: ${total / 12}`);
+
+    if((total/12) >= 20000){
+        $('.totalMonthlyCost').css('background-color', 'red');
     }
-  }
+}
+ 
+  //* function calculateSalary() {
+  //let employeeSalary = 0;
+  //for (let employeeSalary of employees) {
+  //employeeSalary += employeeSalary.annualSalary;
+  // }
+  //employeeSalary /12;
+  // if (employeeSalary /12 >= 20000) {
+  // $('totalMonthlyCost').css('background-color', 'red');
+  // }
+  //  }
   
   
   
