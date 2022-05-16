@@ -7,10 +7,7 @@ th {
 td {
     border: 1px black
 }
-table {
-    border: 1px black, 
-    
-}
+
 div {
     background-color: palegreen;
     border: 10px solid rgb(255, 234, 246);
@@ -20,6 +17,8 @@ div {
 }
 h1 {
     text-align: center;
+    background-color: darkgray;
+    
 }
 .monthlyCost {
     text-align: right;
@@ -30,7 +29,7 @@ h2{
 }
 table{
     border: 1px solid black;
-    width: 100%;
+    width: 50%;
     border-collapse: collapse;
-    
 }
+    
