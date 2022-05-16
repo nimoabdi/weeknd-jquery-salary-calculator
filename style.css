@@ -1,0 +1,30 @@
+body {
+    background-color: whitesmoke;
+}
+th {
+    border: 1px black
+}
+td {
+    border: 1px black
+}
+table {
+    border: 1px black, 
+    
+}
+div {
+    background-color: palegreen;
+    border: 10px solid rgb(255, 234, 246);
+    text-align: center;
+    font-size: 18px;
+    color: wheat;
+}
+h1 {
+    text-align: center;
+}
+.monthlyCost {
+    text-align: right;
+}
+
+h2{
+    text-align: right;
+}
