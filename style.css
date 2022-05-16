@@ -1,7 +1,7 @@
 body {
     background-color: whitesmoke;
 }
-th {
+th { 
     border: 1px black
 }
 td {
@@ -28,8 +28,9 @@ h2{
     text-align: right;
 }
 table{
+    text-align: left;
     border: 1px solid black;
     width: 50%;
-    border-collapse: collapse;
+  
 }
     
